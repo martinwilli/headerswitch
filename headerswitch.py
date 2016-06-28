@@ -45,7 +45,7 @@ class HeaderSwitchWindow(GObject.Object, Gedit.WindowActivatable):
 					self.window.set_active_tab(tab)
 					return
 		self.window.create_tab_from_location(Gio.file_new_for_path(path),
-											 None, 0, 0, False, True)
+											 None, 0, 0, True, True)
 
 	def on_switch(self, action, parameter, user_data=None):
 		doc = self.window.get_active_document()
